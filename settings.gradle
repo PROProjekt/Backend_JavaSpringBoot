@@ -1,0 +1,4 @@
+rootProject.name = 'PRO_Cinema'
+
+include ':app'
+

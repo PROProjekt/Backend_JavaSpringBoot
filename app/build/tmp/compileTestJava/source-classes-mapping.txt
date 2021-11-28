@@ -1,0 +1,12 @@
+pl/edu/pjwstk/pro/config/RestAssurePortListener.java
+ pl.edu.pjwstk.pro.config.RestAssurePortListener
+pl/edu/pjwstk/pro/config/TestConfig.java
+ pl.edu.pjwstk.pro.config.TestConfig
+pl/edu/pjwstk/pro/config/TestContextHolder.java
+ pl.edu.pjwstk.pro.config.TestContextHolder
+pl/edu/pjwstk/pro/config/IntegrationTest.java
+ pl.edu.pjwstk.pro.config.IntegrationTest
+pl/edu/pjwstk/pro/ExampleTest.java
+ pl.edu.pjwstk.pro.ExampleTest
+pl/edu/pjwstk/pro/TestRegistrationAndLogin.java
+ pl.edu.pjwstk.pro.TestRegistrationAndLogin
