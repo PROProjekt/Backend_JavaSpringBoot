@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import pl.edu.pjwstk.pro.config.IntegrationTest;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
+
 
 @RunWith(SpringRunner.class)
 @IntegrationTest
