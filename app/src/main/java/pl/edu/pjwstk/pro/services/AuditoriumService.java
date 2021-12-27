@@ -39,9 +39,8 @@ public class AuditoriumService {
         }
     }
     public List<String> getSeats(){
-        var seats =  em.createQuery("select ue.seat_number from AuditoriumEntity ue", String.class)
+        return em.createQuery("select ue.seat_number from AuditoriumEntity ue", String.class)
                 .getResultList();
-        return seats;
     }
     public boolean auditoriumExist(Long id){
         var isExist =  em.createQuery("select ue from AuditoriumEntity ue where ue.id = :id", AuditoriumEntity.class)

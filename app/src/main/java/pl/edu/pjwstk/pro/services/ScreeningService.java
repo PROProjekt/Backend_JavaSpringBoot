@@ -40,14 +40,17 @@ public class ScreeningService {
         }
     }
     public List<ScreeningEntity> getAllScreening(){
-        var screeningList = em.createQuery("select ue from ScreeningEntity ue", ScreeningEntity.class)
+        return em.createQuery("select ue from ScreeningEntity ue", ScreeningEntity.class)
                 .getResultList();
-        return screeningList;
     }
     public ScreeningEntity getSingleScreening(Long id){
-        var screening = em.createQuery("select ue from ScreeningEntity ue where ue.id = :id", ScreeningEntity.class)
-                .setParameter("id", id).getSingleResult();
-        return screening;
+        if(screeningExist(id)){
+            return em.createQuery("select ue from ScreeningEntity ue where ue.id = :id", ScreeningEntity.class)
+                    .setParameter("id", id).getSingleResult();
+        }else{
+            throw new EntityNotFoundException();
+        }
+
     }
     public boolean screeningExist(Long id) {
         var isExist = em.createQuery("select ue from ScreeningEntity ue where ue.id = :id", ScreeningEntity.class)

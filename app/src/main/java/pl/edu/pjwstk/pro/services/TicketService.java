@@ -6,6 +6,7 @@ import pl.edu.pjwstk.pro.entities.TicketEntity;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
 
 @Service
 @Transactional
@@ -29,6 +30,25 @@ public class TicketService {
         }else{
             throw new EntityNotFoundException();
         }
+    }
+    public boolean isAnyTicketExist(){
+        return em.createQuery("select count(ue) from TicketEntity ue", Long.class)
+                .getSingleResult()
+                > 0;
+    }
+    public List<TicketEntity> getAllTickets(){
+        if(!isAnyTicketExist()){
+            throw new EntityNotFoundException();
+        }else{
+            var movieList = em.createQuery("select ue from TicketEntity ue", TicketEntity.class)
+                    .getResultList();
+            return movieList;
+        }
+    }
+    public TicketEntity getSingleTicket(Long id){
+        var ticket = em.createQuery("select ue from TicketEntity ue where ue.id = :id", TicketEntity.class)
+                .setParameter("id", id).getSingleResult();
+        return ticket;
     }
     public boolean ticketExist(Long id) {
         var isExist = em.createQuery("select ue from TicketEntity ue where ue.id = :id", TicketEntity.class)

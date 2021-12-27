@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.389s</div>
+<div class="counter">1.447s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,27 +79,27 @@
 </thead>
 <tr>
 <td class="success">siteShouldBeAllowedForEveryoneWithoutAuthenticate</td>
-<td class="success">0.905s</td>
+<td class="success">0.869s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testRegistrationShouldReturn200AndGetRoleAsUser</td>
-<td class="success">0.115s</td>
+<td class="success">0.149s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">thisIsForAdminMethodShouldReturn200AsAdmin</td>
-<td class="success">0.153s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">thisIsForAdminMethodShouldReturn403AsUser</td>
 <td class="success">0.182s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">thisIsForAdminMethodShouldReturn403AsUser</td>
+<td class="success">0.209s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">wrongLoginParamsShouldReturnStatusCode401</td>
-<td class="success">0.034s</td>
+<td class="success">0.038s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,29 +107,29 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>12:21:16.474 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.487 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-12:21:16.499 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-12:21:16.552 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-12:21:16.574 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin], using SpringBootContextLoader
-12:21:16.580 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: class path resource [pl/edu/pjwstk/pro/TestRegistrationAndLogin-context.xml] does not exist
-12:21:16.581 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: class path resource [pl/edu/pjwstk/pro/TestRegistrationAndLoginContext.groovy] does not exist
-12:21:16.581 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: no resource found for suffixes {-context.xml, Context.groovy}.
-12:21:16.582 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: TestRegistrationAndLogin does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:21:16.739 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Lenovo E580\Desktop\PRO_Cinema\app\build\classes\java\main\pl\edu\pjwstk\pro\App.class]
-12:21:16.765 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration pl.edu.pjwstk.pro.App for test class pl.edu.pjwstk.pro.TestRegistrationAndLogin
-12:21:16.911 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Merging default listeners with listeners configured via @TestExecutionListeners for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin].
-12:21:16.912 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-12:21:16.940 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4cf4707b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3f3d62ca, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@42b4af1d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@55425706, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a5a927d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e259cce, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@98e0a50, org.springframework.test.context.event.EventPublishingTestExecutionListener@4eb38600, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@20143cd1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@621517f1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1b305d69, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@49615b89, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@481204c0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f238ac, pl.edu.pjwstk.pro.config.RestAssurePortListener@1bb0f68e, pl.edu.pjwstk.pro.config.TestContextHolder@58ce4b62]
-12:21:16.946 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.947 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.951 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.951 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.952 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.952 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
-12:21:16.958 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@12ff44ea testClass = TestRegistrationAndLogin, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1ad15818 testClass = TestRegistrationAndLogin, locations = '{}', classes = '{class pl.edu.pjwstk.pro.App}', contextInitializerClasses = '[]', activeProfiles = '{test, noSecurity}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5b029983, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6b56422b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4bbd5849, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a82389, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
-12:21:16.986 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles [test, noSecurity]
-12:21:16.993 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+<pre>12:36:42.236 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.246 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:36:42.263 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:36:42.312 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:36:42.330 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin], using SpringBootContextLoader
+12:36:42.337 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: class path resource [pl/edu/pjwstk/pro/TestRegistrationAndLogin-context.xml] does not exist
+12:36:42.340 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: class path resource [pl/edu/pjwstk/pro/TestRegistrationAndLoginContext.groovy] does not exist
+12:36:42.341 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:36:42.342 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]: TestRegistrationAndLogin does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:36:42.506 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Lenovo E580\Desktop\PRO_Cinema\app\build\classes\java\main\pl\edu\pjwstk\pro\App.class]
+12:36:42.541 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration pl.edu.pjwstk.pro.App for test class pl.edu.pjwstk.pro.TestRegistrationAndLogin
+12:36:42.690 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Merging default listeners with listeners configured via @TestExecutionListeners for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin].
+12:36:42.690 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+12:36:42.715 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@597621c7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@64b417b1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@323e0057, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fec02, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6adf9d95, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2e9206e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6c6c87dd, org.springframework.test.context.event.EventPublishingTestExecutionListener@11be49ae, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@71b4d39, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3900fe3c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@31dac4ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@52ca1802, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@fe5e5e7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@312a0b39, pl.edu.pjwstk.pro.config.RestAssurePortListener@56b24606, pl.edu.pjwstk.pro.config.TestContextHolder@54ba4eda]
+12:36:42.726 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.728 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.732 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.733 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.734 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.734 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.pro.TestRegistrationAndLogin]
+12:36:42.742 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@13c32a93 testClass = TestRegistrationAndLogin, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@52af0fa6 testClass = TestRegistrationAndLogin, locations = '{}', classes = '{class pl.edu.pjwstk.pro.App}', contextInitializerClasses = '[]', activeProfiles = '{test, noSecurity}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@53a536a6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6cfeec1e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@56b45383, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32770fab, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
+12:36:42.775 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles [test, noSecurity]
+12:36:42.781 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -139,61 +139,61 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.3.RELEASE)
 
-2021-12-27 12:21:17.533  INFO 15020 --- [    Test worker] p.e.pjwstk.pro.TestRegistrationAndLogin  : Starting TestRegistrationAndLogin on LAPTOP-7ML77JRI with PID 15020 (started by Lenovo E580 in C:\Users\Lenovo E580\Desktop\PRO_Cinema\app)
-2021-12-27 12:21:17.539  INFO 15020 --- [    Test worker] p.e.pjwstk.pro.TestRegistrationAndLogin  : The following profiles are active: test,noSecurity
-2021-12-27 12:21:18.791  INFO 15020 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-12-27 12:21:18.894  INFO 15020 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91ms. Found 1 JPA repository interfaces.
-2021-12-27 12:21:19.602  INFO 15020 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7ef4634f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-12-27 12:21:19.652  INFO 15020 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-12-27 12:21:20.798  INFO 15020 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2021-12-27 12:21:20.840  INFO 15020 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-27 12:21:20.841  INFO 15020 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2021-12-27 12:21:21.274  INFO 15020 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2021-12-27 12:21:21.274  INFO 15020 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3425 ms
-2021-12-27 12:21:22.002  INFO 15020 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-27 12:21:22.238  INFO 15020 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-2021-12-27 12:21:24.521  INFO 15020 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
-2021-12-27 12:21:24.521  INFO 15020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
-2021-12-27 12:21:24.641  INFO 15020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+2021-12-27 12:36:43.320  INFO 17400 --- [    Test worker] p.e.pjwstk.pro.TestRegistrationAndLogin  : Starting TestRegistrationAndLogin on LAPTOP-7ML77JRI with PID 17400 (started by Lenovo E580 in C:\Users\Lenovo E580\Desktop\PRO_Cinema\app)
+2021-12-27 12:36:43.321  INFO 17400 --- [    Test worker] p.e.pjwstk.pro.TestRegistrationAndLogin  : The following profiles are active: test,noSecurity
+2021-12-27 12:36:44.573  INFO 17400 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-12-27 12:36:44.658  INFO 17400 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 1 JPA repository interfaces.
+2021-12-27 12:36:45.112  INFO 17400 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1c92f8ad' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 12:36:45.127  INFO 17400 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 12:36:45.605  INFO 17400 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-12-27 12:36:45.622  INFO 17400 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-27 12:36:45.623  INFO 17400 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-12-27 12:36:45.845  INFO 17400 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2021-12-27 12:36:45.845  INFO 17400 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2127 ms
+2021-12-27 12:36:46.188  INFO 17400 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-27 12:36:46.324  INFO 17400 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2021-12-27 12:36:47.672  INFO 17400 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2021-12-27 12:36:47.673  INFO 17400 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2021-12-27 12:36:47.759  INFO 17400 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
   Server Version: 20.10.2
   API Version: 1.41
   Operating System: Docker Desktop
   Total Memory: 6229 MB
-2021-12-27 12:21:24.646  INFO 15020 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-2021-12-27 12:21:25.136  INFO 15020 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io
-2021-12-27 12:21:31.612  INFO 15020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-2021-12-27 12:21:31.613  INFO 15020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
-2021-12-27 12:21:31.614  INFO 15020 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
-2021-12-27 12:21:31.764  INFO 15020 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker environment should have more than 2GB free disk space
-2021-12-27 12:21:31.796  INFO 15020 --- [    Test worker] docker[postgres:13]                      : Creating container for image: postgres:13
-2021-12-27 12:21:31.914  INFO 15020 --- [    Test worker] docker[postgres:13]                      : Starting container with ID: 5079fa0392bfec1fc1ef85f6665b5e8233411ecb9cf50e41b232a4c548944fbc
-2021-12-27 12:21:32.832  INFO 15020 --- [    Test worker] docker[postgres:13]                      : Container postgres:13 is starting: 5079fa0392bfec1fc1ef85f6665b5e8233411ecb9cf50e41b232a4c548944fbc
-2021-12-27 12:21:36.770  INFO 15020 --- [    Test worker] docker[postgres:13]                      : Container postgres:13 started in PT5.0048922S
-2021-12-27 12:21:37.065  INFO 15020 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-27 12:21:38.209  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
-2021-12-27 12:21:38.226  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE public.databasechangeloglock (ID INTEGER NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP WITHOUT TIME ZONE, LOCKEDBY VARCHAR(255), CONSTRAINT DATABASECHANGELOGLOCK_PKEY PRIMARY KEY (ID))
-2021-12-27 12:21:38.233  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
-2021-12-27 12:21:38.236  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : DELETE FROM public.databasechangeloglock
-2021-12-27 12:21:38.238  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangeloglock (ID, LOCKED) VALUES (1, FALSE)
-2021-12-27 12:21:38.243  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
-2021-12-27 12:21:38.253  INFO 15020 --- [    Test worker] l.lockservice.StandardLockService        : Successfully acquired change log lock
-2021-12-27 12:21:39.456  INFO 15020 --- [    Test worker] l.c.StandardChangeLogHistoryService      : Creating database history table with name: public.databasechangelog
-2021-12-27 12:21:39.457  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE public.databasechangelog (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP WITHOUT TIME ZONE NOT NULL, ORDEREXECUTED INTEGER NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-2021-12-27 12:21:39.462  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
-2021-12-27 12:21:39.465  INFO 15020 --- [    Test worker] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
-2021-12-27 12:21:39.465  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2021-12-27 12:21:39.469  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
-2021-12-27 12:21:39.486  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE SEQUENCE hibernate_sequence;
+2021-12-27 12:36:47.763  INFO 17400 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2021-12-27 12:36:48.072  INFO 17400 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io
+2021-12-27 12:36:54.338  INFO 17400 --- [    Test worker] org.testcontainers.DockerClientFactory   : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2021-12-27 12:36:54.338  INFO 17400 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2021-12-27 12:36:54.339  INFO 17400 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2021-12-27 12:36:54.454  INFO 17400 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker environment should have more than 2GB free disk space
+2021-12-27 12:36:54.479  INFO 17400 --- [    Test worker] docker[postgres:13]                      : Creating container for image: postgres:13
+2021-12-27 12:36:54.565  INFO 17400 --- [    Test worker] docker[postgres:13]                      : Starting container with ID: d1e06a91d2d41e9d54e4575578b22baaa9a251cf9dd526327bbecae358141b1c
+2021-12-27 12:36:55.706  INFO 17400 --- [    Test worker] docker[postgres:13]                      : Container postgres:13 is starting: d1e06a91d2d41e9d54e4575578b22baaa9a251cf9dd526327bbecae358141b1c
+2021-12-27 12:36:58.440  INFO 17400 --- [    Test worker] docker[postgres:13]                      : Container postgres:13 started in PT3.9820277S
+2021-12-27 12:36:58.706  INFO 17400 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-27 12:36:59.859  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2021-12-27 12:36:59.883  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE public.databasechangeloglock (ID INTEGER NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP WITHOUT TIME ZONE, LOCKEDBY VARCHAR(255), CONSTRAINT DATABASECHANGELOGLOCK_PKEY PRIMARY KEY (ID))
+2021-12-27 12:36:59.891  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2021-12-27 12:36:59.896  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : DELETE FROM public.databasechangeloglock
+2021-12-27 12:36:59.898  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangeloglock (ID, LOCKED) VALUES (1, FALSE)
+2021-12-27 12:36:59.905  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2021-12-27 12:36:59.916  INFO 17400 --- [    Test worker] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2021-12-27 12:37:01.078  INFO 17400 --- [    Test worker] l.c.StandardChangeLogHistoryService      : Creating database history table with name: public.databasechangelog
+2021-12-27 12:37:01.080  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE public.databasechangelog (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP WITHOUT TIME ZONE NOT NULL, ORDEREXECUTED INTEGER NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2021-12-27 12:37:01.086  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2021-12-27 12:37:01.089  INFO 17400 --- [    Test worker] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2021-12-27 12:37:01.090  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2021-12-27 12:37:01.095  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2021-12-27 12:37:01.117  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE SEQUENCE hibernate_sequence;
 
 CREATE TABLE test1(
      id BIGSERIAL NOT NULL PRIMARY KEY,
      name VARCHAR NOT NULL
 )
-2021-12-27 12:21:39.492  INFO 15020 --- [    Test worker] liquibase.changelog.ChangeSet            : SQL in file db.changelog/20211125_init.sql executed
-2021-12-27 12:21:39.493  INFO 15020 --- [    Test worker] liquibase.changelog.ChangeSet            : ChangeSet classpath:db.changelog.yaml::20211125_init.sql::Zuzanna Borkowska ran successfully in 9ms
-2021-12-27 12:21:39.494  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT MAX(ORDEREXECUTED) FROM public.databasechangelog
-2021-12-27 12:21:39.497  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20211125_init.sql', 'Zuzanna Borkowska', 'classpath:db.changelog.yaml', NOW(), 1, '8:09077427dee0f842cd46cb1dd99c27fa', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.8.9', '0604099471')
-2021-12-27 12:21:39.504  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE user_role(
+2021-12-27 12:37:01.125  INFO 17400 --- [    Test worker] liquibase.changelog.ChangeSet            : SQL in file db.changelog/20211125_init.sql executed
+2021-12-27 12:37:01.128  INFO 17400 --- [    Test worker] liquibase.changelog.ChangeSet            : ChangeSet classpath:db.changelog.yaml::20211125_init.sql::Zuzanna Borkowska ran successfully in 15ms
+2021-12-27 12:37:01.129  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : SELECT MAX(ORDEREXECUTED) FROM public.databasechangelog
+2021-12-27 12:37:01.133  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20211125_init.sql', 'Zuzanna Borkowska', 'classpath:db.changelog.yaml', NOW(), 1, '8:09077427dee0f842cd46cb1dd99c27fa', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.8.9', '0605021097')
+2021-12-27 12:37:01.144  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE user_role(
    id BIGINT NOT NULL PRIMARY KEY,
    role VARCHAR(20)
 
@@ -207,10 +207,10 @@ CREATE TABLE &quot;user&quot;(
    CONSTRAINT fk_user_role_id FOREIGN KEY (role_id) REFERENCES user_role(id),
    PRIMARY KEY(id)
 )
-2021-12-27 12:21:39.513  INFO 15020 --- [    Test worker] liquibase.changelog.ChangeSet            : SQL in file db.changelog/20211128_add_users.sql executed
-2021-12-27 12:21:39.515  INFO 15020 --- [    Test worker] liquibase.changelog.ChangeSet            : ChangeSet classpath:db.changelog.yaml::20211128_add_users.sql::Zuzanna Borkowska ran successfully in 14ms
-2021-12-27 12:21:39.516  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20211128_add_users.sql', 'Zuzanna Borkowska', 'classpath:db.changelog.yaml', NOW(), 2, '8:f5aaff1b9e5e48d2b80063c5252fe629', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.8.9', '0604099471')
-2021-12-27 12:21:39.531  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : DROP TABLE test1;
+2021-12-27 12:37:01.151  INFO 17400 --- [    Test worker] liquibase.changelog.ChangeSet            : SQL in file db.changelog/20211128_add_users.sql executed
+2021-12-27 12:37:01.154  INFO 17400 --- [    Test worker] liquibase.changelog.ChangeSet            : ChangeSet classpath:db.changelog.yaml::20211128_add_users.sql::Zuzanna Borkowska ran successfully in 15ms
+2021-12-27 12:37:01.155  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20211128_add_users.sql', 'Zuzanna Borkowska', 'classpath:db.changelog.yaml', NOW(), 2, '8:f5aaff1b9e5e48d2b80063c5252fe629', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.8.9', '0605021097')
+2021-12-27 12:37:01.175  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : DROP TABLE test1;
 CREATE TABLE ticket(
      id BIGINT NOT NULL,
      price DECIMAL(10,2) NOT NULL,
@@ -251,31 +251,31 @@ CREATE TABLE movie_photo(
       PRIMARY KEY (id),
       CONSTRAINT fk_movie_id FOREIGN KEY (movie_id) REFERENCES  movie(id)
 )
-2021-12-27 12:21:39.553  INFO 15020 --- [    Test worker] liquibase.changelog.ChangeSet            : SQL in file db.changelog/20211209_cinema.sql executed
-2021-12-27 12:21:39.555  INFO 15020 --- [    Test worker] liquibase.changelog.ChangeSet            : ChangeSet classpath:db.changelog.yaml::20211209_cinema.sql::Zuzanna Borkowska ran successfully in 35ms
-2021-12-27 12:21:39.557  INFO 15020 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20211209_cinema.sql', 'Zuzanna Borkowska', 'classpath:db.changelog.yaml', NOW(), 3, '8:64c8ac29b893ed5664e7feb299bbceee', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.8.9', '0604099471')
-2021-12-27 12:21:39.565  INFO 15020 --- [    Test worker] l.lockservice.StandardLockService        : Successfully released change log lock
-2021-12-27 12:21:39.712  INFO 15020 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-12-27 12:21:39.822  INFO 15020 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-27 12:21:39.865  WARN 15020 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-27 12:21:39.930  INFO 15020 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
-2021-12-27 12:21:40.224  INFO 15020 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-12-27 12:21:40.464  INFO 15020 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2021-12-27 12:21:40.954  INFO 15020 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-12-27 12:37:01.194  INFO 17400 --- [    Test worker] liquibase.changelog.ChangeSet            : SQL in file db.changelog/20211209_cinema.sql executed
+2021-12-27 12:37:01.200  INFO 17400 --- [    Test worker] liquibase.changelog.ChangeSet            : ChangeSet classpath:db.changelog.yaml::20211209_cinema.sql::Zuzanna Borkowska ran successfully in 37ms
+2021-12-27 12:37:01.202  INFO 17400 --- [    Test worker] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20211209_cinema.sql', 'Zuzanna Borkowska', 'classpath:db.changelog.yaml', NOW(), 3, '8:64c8ac29b893ed5664e7feb299bbceee', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.8.9', '0605021097')
+2021-12-27 12:37:01.216  INFO 17400 --- [    Test worker] l.lockservice.StandardLockService        : Successfully released change log lock
+2021-12-27 12:37:01.403  INFO 17400 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-27 12:37:01.518  INFO 17400 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-27 12:37:01.560  WARN 17400 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-27 12:37:01.639  INFO 17400 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-12-27 12:37:01.921  INFO 17400 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-12-27 12:37:02.190  INFO 17400 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-12-27 12:37:02.791  INFO 17400 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 2554d004-364d-41b2-a8e4-e77b78c19c57
+Using generated security password: 52bae989-7424-4428-b273-091a07580fde
 
-2021-12-27 12:21:41.176  INFO 15020 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11c4002b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ecaed30, org.springframework.security.web.header.HeaderWriterFilter@5f0466f4, org.springframework.security.web.authentication.logout.LogoutFilter@2d8ef1f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26663be8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1370e580, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@283bd872, org.springframework.security.web.session.SessionManagementFilter@58da3091, org.springframework.security.web.access.ExceptionTranslationFilter@6b09fafa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16867fb3]
-2021-12-27 12:21:41.608  INFO 15020 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-27 12:21:41.625  INFO 15020 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-27 12:21:41.643  INFO 15020 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51497 (http) with context path '/api'
-2021-12-27 12:21:41.644  INFO 15020 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2021-12-27 12:21:42.024  INFO 15020 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2021-12-27 12:21:42.029  INFO 15020 --- [    Test worker] p.e.pjwstk.pro.TestRegistrationAndLogin  : Started TestRegistrationAndLogin in 25.036 seconds (JVM running for 27.761)
-2021-12-27 12:21:42.969  INFO 15020 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-27 12:21:42.969  INFO 15020 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-27 12:21:42.994  INFO 15020 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
-2021-12-27 12:21:44.521  WARN 15020 --- [o-auto-1-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [602] milliseconds.
+2021-12-27 12:37:03.052  INFO 17400 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f979692, org.springframework.security.web.context.SecurityContextPersistenceFilter@7593d342, org.springframework.security.web.header.HeaderWriterFilter@233886df, org.springframework.security.web.authentication.logout.LogoutFilter@13e910e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c505b18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42981b53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@273c71a4, org.springframework.security.web.session.SessionManagementFilter@69182908, org.springframework.security.web.access.ExceptionTranslationFilter@5e186fb1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49a78ce8]
+2021-12-27 12:37:03.477  INFO 17400 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-27 12:37:03.491  INFO 17400 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 12:37:03.566  INFO 17400 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51872 (http) with context path '/api'
+2021-12-27 12:37:03.569  INFO 17400 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-12-27 12:37:04.097  INFO 17400 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-12-27 12:37:04.106  INFO 17400 --- [    Test worker] p.e.pjwstk.pro.TestRegistrationAndLogin  : Started TestRegistrationAndLogin in 21.321 seconds (JVM running for 23.71)
+2021-12-27 12:37:05.219  INFO 17400 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-27 12:37:05.220  INFO 17400 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-27 12:37:05.259  INFO 17400 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 39 ms
+2021-12-27 12:37:06.736  WARN 17400 --- [o-auto-1-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [505] milliseconds.
 </pre>
 </span>
 </div>
@@ -287,7 +287,7 @@ Using generated security password: 2554d004-364d-41b2-a8e4-e77b78c19c57
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7</a> at 27 gru 2021, 12:21:46</p>
+<a href="http://www.gradle.org">Gradle 6.7</a> at 27 gru 2021, 12:37:09</p>
 </div>
 </div>
 </body>

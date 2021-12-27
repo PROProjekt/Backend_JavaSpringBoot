@@ -28,6 +28,10 @@ public class MovieController {
     public void editMovie(@PathVariable Long movieId, @RequestBody MovieRequest movieRequest){
         movieService.editMovie(movieId,movieRequest);
     }
+    @GetMapping("/getMovie/{movieId}")
+    public MovieEntity showMovies(@PathVariable Long movieId){
+        return movieService.getSingleMovie(movieId);
+    }
 
     @GetMapping("/getMovies")
     public List<MovieEntity> showMovies(){

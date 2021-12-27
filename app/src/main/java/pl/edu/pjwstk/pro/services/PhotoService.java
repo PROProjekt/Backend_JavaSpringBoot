@@ -52,9 +52,13 @@ public class PhotoService {
     }
 
     public PhotoEntity getSinglePhoto(Long id) {
-        var photo = em.createQuery("select ue from PhotoEntity ue where ue.id = :id", PhotoEntity.class)
-                .setParameter("id", id).getSingleResult();
-        return photo;
+        if(photoExist(id)){
+            return em.createQuery("select ue from PhotoEntity ue where ue.id = :id", PhotoEntity.class)
+                    .setParameter("id", id).getSingleResult();
+        }else{
+            throw new EntityNotFoundException();
+        }
+
     }
 
     public List<PhotoEntity> getAllPhotos() {

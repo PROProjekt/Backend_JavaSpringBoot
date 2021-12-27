@@ -70,7 +70,7 @@ pl/edu/pjwstk/pro/services/AuditoriumService.java
  pl.edu.pjwstk.pro.services.AuditoriumService
 pl/edu/pjwstk/pro/controllers/RegisterController.java
  pl.edu.pjwstk.pro.controllers.RegisterController
-pl/edu/pjwstk/pro/controllers/TicketController.java
- pl.edu.pjwstk.pro.controllers.TicketController
 pl/edu/pjwstk/pro/services/TicketService.java
  pl.edu.pjwstk.pro.services.TicketService
+pl/edu/pjwstk/pro/controllers/TicketController.java
+ pl.edu.pjwstk.pro.controllers.TicketController

@@ -68,4 +68,12 @@ public class MovieService {
             return movieList;
         }
     }
+    public MovieEntity getSingleMovie(Long id){
+        if(movieExist(id)){
+            return em.createQuery("select ue from MovieEntity ue where ue.id = :id", MovieEntity.class)
+                    .setParameter("id",id).getSingleResult();
+        }else{
+            throw new EntityNotFoundException();
+        }
+    }
 }
