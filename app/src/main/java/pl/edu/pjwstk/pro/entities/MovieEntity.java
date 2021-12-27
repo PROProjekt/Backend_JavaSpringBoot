@@ -53,6 +53,10 @@ public class MovieEntity {
         return id;
     }
 
+    public void setPhotos(List<PhotoEntity> photos) {
+        this.photos = photos;
+    }
+
     public String getTitle() {
         return title;
     }
