@@ -13,21 +13,18 @@ public class MovieEntity {
     @Column(name="title")
     private String title;
 
-    @Column(name="date")
-    private String date;
+    @Column(name="year")
+    private String year;
 
     @Column(name="description")
     private String description;
 
+    @Column(name="type")
+    private String type;
+
     @ManyToOne
     @JoinColumn(name = "screening_id")
     private ScreeningEntity screening;
-
-    @OneToMany(mappedBy = "movie", cascade = {CascadeType.ALL})
-    private List<PhotoEntity> photos;
-
-    public MovieEntity() {
-    }
 
     public void setId(Long id) {
         this.id = id;
@@ -37,12 +34,16 @@ public class MovieEntity {
         this.title = title;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setScreening(ScreeningEntity screening) {
@@ -53,20 +54,20 @@ public class MovieEntity {
         return id;
     }
 
-    public void setPhotos(List<PhotoEntity> photos) {
-        this.photos = photos;
-    }
-
     public String getTitle() {
         return title;
     }
 
-    public String getDate() {
-        return date;
+    public String getYear() {
+        return year;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public ScreeningEntity getScreening() {

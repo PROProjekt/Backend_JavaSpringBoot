@@ -3,7 +3,7 @@ package pl.edu.pjwstk.pro.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "auditorium",schema = "public")
+@Table(name = "auditorium", schema = "public")
 public class AuditoriumEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,7 +14,7 @@ public class AuditoriumEntity {
 
     @ManyToOne
     @JoinColumn(name = "screening_id")
-    private ScreeningEntity screening;
+    private ScreeningEntity screeningEntity;
 
     public void setId(Long id) {
         this.id = id;
@@ -24,8 +24,8 @@ public class AuditoriumEntity {
         this.seat_number = seat_number;
     }
 
-    public void setScreening(ScreeningEntity screening) {
-        this.screening = screening;
+    public void setScreeningEntity(ScreeningEntity screeningEntity) {
+        this.screeningEntity = screeningEntity;
     }
 
     public Long getId() {
@@ -36,7 +36,7 @@ public class AuditoriumEntity {
         return seat_number;
     }
 
-    public ScreeningEntity getScreening() {
-        return screening;
+    public ScreeningEntity getScreeningEntity() {
+        return screeningEntity;
     }
 }

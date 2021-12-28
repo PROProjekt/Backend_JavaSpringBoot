@@ -1,15 +1,9 @@
-pl/edu/pjwstk/pro/App.java
- pl.edu.pjwstk.pro.App
-pl/edu/pjwstk/pro/UserSession.java
- pl.edu.pjwstk.pro.UserSession
 pl/edu/pjwstk/pro/RoleService.java
  pl.edu.pjwstk.pro.RoleService
 pl/edu/pjwstk/pro/controllers/LoginController.java
  pl.edu.pjwstk.pro.controllers.LoginController
 pl/edu/pjwstk/pro/AppAuthentication.java
  pl.edu.pjwstk.pro.AppAuthentication
-pl/edu/pjwstk/pro/exceptions/UnauthorizedException.java
- pl.edu.pjwstk.pro.exceptions.UnauthorizedException
 pl/edu/pjwstk/pro/RoleRepository.java
  pl.edu.pjwstk.pro.RoleRepository
 pl/edu/pjwstk/pro/LoginRequest.java
@@ -20,57 +14,29 @@ pl/edu/pjwstk/pro/AppWebSecurityConfigurerAdapter.java
  pl.edu.pjwstk.pro.AppWebSecurityConfigurerAdapter
 pl/edu/pjwstk/pro/AppWebSecurityConfig.java
  pl.edu.pjwstk.pro.AppWebSecurityConfig
-pl/edu/pjwstk/pro/entities/RoleEntity.java
- pl.edu.pjwstk.pro.entities.RoleEntity
+pl/edu/pjwstk/pro/exceptions/UnauthorizedException.java
+ pl.edu.pjwstk.pro.exceptions.UnauthorizedException
 pl/edu/pjwstk/pro/RegisterRequest.java
  pl.edu.pjwstk.pro.RegisterRequest
 pl/edu/pjwstk/pro/ExampleFilter.java
  pl.edu.pjwstk.pro.ExampleFilter
+pl/edu/pjwstk/pro/App.java
+ pl.edu.pjwstk.pro.App
+pl/edu/pjwstk/pro/exceptions/EntityNotFoundException.java
+ pl.edu.pjwstk.pro.exceptions.EntityNotFoundException
+pl/edu/pjwstk/pro/UserSession.java
+ pl.edu.pjwstk.pro.UserSession
+pl/edu/pjwstk/pro/entities/RoleEntity.java
+ pl.edu.pjwstk.pro.entities.RoleEntity
 pl/edu/pjwstk/pro/entities/TicketEntity.java
  pl.edu.pjwstk.pro.entities.TicketEntity
 pl/edu/pjwstk/pro/AuthenticationService.java
  pl.edu.pjwstk.pro.AuthenticationService
-pl/edu/pjwstk/pro/entities/AuditoriumEntity.java
- pl.edu.pjwstk.pro.entities.AuditoriumEntity
-pl/edu/pjwstk/pro/controllers/ScreeningContoller.java
- pl.edu.pjwstk.pro.controllers.ScreeningContoller
-pl/edu/pjwstk/pro/entities/UserEntity.java
- pl.edu.pjwstk.pro.entities.UserEntity
-pl/edu/pjwstk/pro/UserService.java
- pl.edu.pjwstk.pro.UserService
-pl/edu/pjwstk/pro/entities/ScreeningEntity.java
- pl.edu.pjwstk.pro.entities.ScreeningEntity
-pl/edu/pjwstk/pro/exceptions/EntityNotFoundException.java
- pl.edu.pjwstk.pro.exceptions.EntityNotFoundException
-pl/edu/pjwstk/pro/requests/MovieRequest.java
- pl.edu.pjwstk.pro.requests.MovieRequest
-pl/edu/pjwstk/pro/entities/PhotoEntity.java
- pl.edu.pjwstk.pro.entities.PhotoEntity
-pl/edu/pjwstk/pro/entities/MovieEntity.java
- pl.edu.pjwstk.pro.entities.MovieEntity
-pl/edu/pjwstk/pro/controllers/MovieController.java
- pl.edu.pjwstk.pro.controllers.MovieController
-pl/edu/pjwstk/pro/controllers/PhotoController.java
- pl.edu.pjwstk.pro.controllers.PhotoController
-pl/edu/pjwstk/pro/controllers/AuditoriumController.java
- pl.edu.pjwstk.pro.controllers.AuditoriumController
-pl/edu/pjwstk/pro/requests/PhotoRequest.java
- pl.edu.pjwstk.pro.requests.PhotoRequest
-pl/edu/pjwstk/pro/requests/AuditoriumRequest.java
- pl.edu.pjwstk.pro.requests.AuditoriumRequest
-pl/edu/pjwstk/pro/services/MovieService.java
- pl.edu.pjwstk.pro.services.MovieService
-pl/edu/pjwstk/pro/services/ScreeningService.java
- pl.edu.pjwstk.pro.services.ScreeningService
-pl/edu/pjwstk/pro/services/PhotoService.java
- pl.edu.pjwstk.pro.services.PhotoService
-pl/edu/pjwstk/pro/requests/ScreeningRequest.java
- pl.edu.pjwstk.pro.requests.ScreeningRequest
-pl/edu/pjwstk/pro/services/AuditoriumService.java
- pl.edu.pjwstk.pro.services.AuditoriumService
 pl/edu/pjwstk/pro/controllers/RegisterController.java
  pl.edu.pjwstk.pro.controllers.RegisterController
-pl/edu/pjwstk/pro/services/TicketService.java
- pl.edu.pjwstk.pro.services.TicketService
-pl/edu/pjwstk/pro/controllers/TicketController.java
- pl.edu.pjwstk.pro.controllers.TicketController
+pl/edu/pjwstk/pro/entities/UserEntity.java
+ pl.edu.pjwstk.pro.entities.UserEntity
+pl/edu/pjwstk/pro/entities/ScreeningEntity.java
+ pl.edu.pjwstk.pro.entities.ScreeningEntity
+pl/edu/pjwstk/pro/UserService.java
+ pl.edu.pjwstk.pro.UserService

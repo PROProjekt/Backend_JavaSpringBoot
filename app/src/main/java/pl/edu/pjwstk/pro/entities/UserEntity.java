@@ -17,9 +17,6 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity authority;
-    @ManyToOne
-    @JoinColumn(name = "ticket_id")
-    private TicketEntity ticket;
 
 
     public void setUsername(String nick) {
