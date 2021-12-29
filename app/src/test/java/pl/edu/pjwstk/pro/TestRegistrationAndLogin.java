@@ -19,8 +19,11 @@ public class TestRegistrationAndLogin {
     @BeforeClass
     public static void adminRegistration() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("username", "Admin");
+        requestParams.put("email", "admin123@wp.pl");
+        requestParams.put("firstname", "admin");
+        requestParams.put("lastname", "adminLastname");
         requestParams.put("password", "adminPassword");
+        requestParams.put("birth_date", "10-11-2002");
         given()
                 .contentType("application/json")
                 .body(requestParams.toString())
@@ -32,8 +35,11 @@ public class TestRegistrationAndLogin {
     @BeforeClass
     public static void userRegistration() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("username", "User");
+        requestParams.put("email", "user123@wp.pl");
+        requestParams.put("firstname", "user");
+        requestParams.put("lastname", "userLastname");
         requestParams.put("password", "userPassword");
+        requestParams.put("birth_date", "10-11-2002");
         given()
                 .contentType("application/json")
                 .body(requestParams.toString())
@@ -45,8 +51,11 @@ public class TestRegistrationAndLogin {
     @Test
     public void testRegistrationShouldReturn200AndGetRoleAsUser() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("username", "thisIsAnotherUser");
+        requestParams.put("email", "thisIsAnotherUser@wpl.pl");
+        requestParams.put("firstname", "thisIsAnotherUser");
+        requestParams.put("lastname", "thisIsAnotherUserLastname");
         requestParams.put("password", "cde3$RFV");
+        requestParams.put("birth_date", "10-11-2002");
         given()
                 .contentType("application/json")
                 .body(requestParams.toString())
@@ -60,7 +69,7 @@ public class TestRegistrationAndLogin {
     @Test
     public void wrongLoginParamsShouldReturnStatusCode401() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("username", "thisUserDoesntExist");
+        requestParams.put("email", "thisUserDoesntExist");
         requestParams.put("password", "xxxxxxx");
         given()
                 .contentType("application/json")
@@ -80,7 +89,7 @@ public class TestRegistrationAndLogin {
     @Test
     public void thisIsForAdminMethodShouldReturn403AsUser() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("username", "User");
+        requestParams.put("email", "user123@wp.pl");
         requestParams.put("password", "userPassword");
         var response = given()
                 .contentType("application/json")
@@ -97,7 +106,7 @@ public class TestRegistrationAndLogin {
     @Test
     public void thisIsForAdminMethodShouldReturn200AsAdmin() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("username", "Admin");
+        requestParams.put("email", "admin123@wp.pl");
         requestParams.put("password", "adminPassword");
         var response = given()
                 .contentType("application/json")

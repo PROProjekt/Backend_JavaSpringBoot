@@ -5,7 +5,6 @@ CREATE TABLE screening(
 
      PRIMARY KEY(id)
 );
-
 CREATE TABLE ticket(
      id BIGINT NOT NULL,
      price DECIMAL(10,2) NOT NULL,

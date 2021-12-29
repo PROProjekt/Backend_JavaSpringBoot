@@ -22,7 +22,7 @@ public class LoginController {
 
     @PostMapping("/login")
     public void login(@RequestBody LoginRequest loginRequest){
-        var isLogged = authenticationService.login(loginRequest.getUsername(), loginRequest.getPassword());
+        var isLogged = authenticationService.login(loginRequest.getEmail(), loginRequest.getPassword());
         if (!isLogged) {
             throw new UnauthorizedException();
         }

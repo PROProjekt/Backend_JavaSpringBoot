@@ -14,13 +14,13 @@ public class AuthenticationService {
         this.userService = userService;
     }
 
-    public boolean login(String userName, String password){
+    public boolean login(String email, String password){
 
-        boolean login = userService.userExist(userName) && userService.isPasswordCorrect(userName, password);
+        boolean login = userService.userExist(email) && userService.isPasswordCorrect(email, password);
 
         if (login){
-            var user = userService.findByUserName(userName);
-            User user1 = new User(user.getUsername(),user.getPassword());
+            var user = userService.findByEmail(email);
+            User user1 = new User(user.getEmail(),user.getPassword());
             user1.setAuthorities(Set.of(user.getAuthority().getRole()));
             SecurityContextHolder.getContext().setAuthentication(new AppAuthentication(user1)); //tworze token autorycyjny
         }

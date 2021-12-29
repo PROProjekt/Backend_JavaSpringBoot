@@ -21,24 +21,27 @@ public class UserService {
         this.em = em;
     }
 
-    public void saveUser(String userName, String password, RoleEntity roleEntity) {
+    public void saveUser(String email, String firstname, String lastname, String password,String birth_date, RoleEntity roleEntity) {
         var userEntity = new UserEntity();
-        userEntity.setUsername(userName);
+        userEntity.setEmail(email);
+        userEntity.setFirstname(firstname);
+        userEntity.setLastname(lastname);
         userEntity.setPassword(passwordEncoder.encode(password));
+        userEntity.setBirth_date(birth_date);
         userEntity.setAuthority(roleEntity);
 
         em.persist(userEntity);
     }
 
-    public UserEntity findByUserName(String username) {
-        return em.createQuery("select ue from UserEntity ue where ue.username = :username", UserEntity.class)
-                .setParameter("username", username)
+    public UserEntity findByEmail(String email) {
+        return em.createQuery("select ue from UserEntity ue where ue.email = :email", UserEntity.class)
+                .setParameter("email", email)
                 .getSingleResult();
     }
 
-    public boolean userExist(String username) {
-        var isExist = em.createQuery("select ue from UserEntity ue where ue.username = :username ", UserEntity.class)
-                .setParameter("username", username).getResultList();
+    public boolean userExist(String email) {
+        var isExist =em.createQuery("select ue from UserEntity ue where ue.email = :email", UserEntity.class)
+                .setParameter("email", email).getResultList();
         if (isExist.isEmpty()) {
             return false;
         } else {
@@ -47,8 +50,8 @@ public class UserService {
 
     }
 
-    public boolean isPasswordCorrect(String username, String password) {
-        UserEntity user = findByUserName(username);
+    public boolean isPasswordCorrect(String email, String password) {
+        UserEntity user = findByEmail(email);
         return passwordEncoder.matches(password, user.getPassword());
     }
 
@@ -59,7 +62,7 @@ public class UserService {
     }
 
     public List<UserEntity> getUsers() {
-        return em.createQuery("select username from UserEntity", UserEntity.class)
+        return em.createQuery("select email from UserEntity", UserEntity.class)
                 .getResultList();
     }
 }

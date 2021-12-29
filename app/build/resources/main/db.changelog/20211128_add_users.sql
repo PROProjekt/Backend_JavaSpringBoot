@@ -5,7 +5,10 @@ CREATE TABLE user_role(
 );
 CREATE TABLE "user"(
    id BIGINT NOT NULL,
-   username VARCHAR(100) NOT NULL,
+   firstname VARCHAR(100) NOT NULL,
+   lastname VARCHAR(100) NOT NULL,
+   birth_date VARCHAR(100) NOT NULL,
+   email VARCHAR(100) NOT NULL,
    password VARCHAR(100) NOT NULL,
    role_id BIGINT NOT NULL,
 
