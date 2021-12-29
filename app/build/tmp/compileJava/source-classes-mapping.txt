@@ -34,7 +34,7 @@ pl/edu/pjwstk/pro/UserService.java
  pl.edu.pjwstk.pro.UserService
 pl/edu/pjwstk/pro/controllers/LoginController.java
  pl.edu.pjwstk.pro.controllers.LoginController
-pl/edu/pjwstk/pro/controllers/RegisterController.java
- pl.edu.pjwstk.pro.controllers.RegisterController
 pl/edu/pjwstk/pro/exceptions/UserAlreadyExistExcpetion.java
  pl.edu.pjwstk.pro.exceptions.UserAlreadyExistExcpetion
+pl/edu/pjwstk/pro/controllers/RegisterController.java
+ pl.edu.pjwstk.pro.controllers.RegisterController

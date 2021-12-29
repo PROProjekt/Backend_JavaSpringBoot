@@ -28,7 +28,6 @@ public class RegisterController {
     UserService userService;
     @Autowired
     RoleService roleService;
-
     @Autowired
     private JavaMailSender javaMailSender;
 
@@ -66,7 +65,7 @@ public class RegisterController {
 
         helper.setText("<h1>Successful registration!</h1>", true);
 
-        FileSystemResource file = new FileSystemResource(new File("C:\\Users\\Lenovo E580\\Desktop\\PRO_Cinema\\app\\src\\main\\java\\pl\\edu\\pjwstk\\pro\\images\\success.jpg"));
+        FileSystemResource file = new FileSystemResource(new File("app/src/main/java/pl/edu/pjwstk/pro/images/success.jpg"));
 
         helper.addAttachment("logo.jpg", file);
 
