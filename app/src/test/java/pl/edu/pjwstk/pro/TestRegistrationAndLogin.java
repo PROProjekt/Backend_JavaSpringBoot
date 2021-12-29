@@ -51,19 +51,17 @@ public class TestRegistrationAndLogin {
     @Test
     public void testRegistrationShouldReturn200AndGetRoleAsUser() throws JSONException {
         JSONObject requestParams = new JSONObject();
-        requestParams.put("email", "thisIsAnotherUser@wpl.pl");
-        requestParams.put("firstname", "thisIsAnotherUser");
-        requestParams.put("lastname", "thisIsAnotherUserLastname");
-        requestParams.put("password", "cde3$RFV");
+        requestParams.put("email", "user1@wp.pl");
+        requestParams.put("firstname", "user");
+        requestParams.put("lastname", "userLastname");
+        requestParams.put("password", "userPassword");
         requestParams.put("birth_date", "10-11-2002");
         given()
                 .contentType("application/json")
                 .body(requestParams.toString())
                 .when()
                 .post("/api/register")
-                .then()
-                .statusCode(200);
-
+                .thenReturn();
     }
 
     @Test
