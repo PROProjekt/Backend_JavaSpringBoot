@@ -22,7 +22,7 @@ public class EmailService {
         helper.setSubject("Successful registration notification");
         helper.setText("<h1>Successful registration!</h1>", true);
 
-        FileSystemResource file = new FileSystemResource(new File("../images/success.jpg"));
+        FileSystemResource file = new FileSystemResource(new File("app/src/main/java/pl/edu/pjwstk/pro/images/success.jpg"));
         //FileSystemResource file = new FileSystemResource(new File("C:\\Users\\Lenovo E580\\Desktop\\PRO_Cinema\\app\\src\\main\\java\\pl\\edu\\pjwstk\\pro\\images\\success.jpg"));
 
         helper.addAttachment("Success.jpg", file);

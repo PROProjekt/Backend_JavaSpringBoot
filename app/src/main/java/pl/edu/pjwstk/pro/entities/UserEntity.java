@@ -76,5 +76,7 @@ public class UserEntity {
     public RoleEntity getAuthority() {
         return authority;
     }
+
 }
+
 

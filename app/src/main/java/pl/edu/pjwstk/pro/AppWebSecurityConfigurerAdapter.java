@@ -15,7 +15,6 @@ public class AppWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapte
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
-                .antMatchers("/sendemail").permitAll()
                 .antMatchers("/auth0/**").permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable();

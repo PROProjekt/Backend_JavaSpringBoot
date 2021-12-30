@@ -1,10 +1,7 @@
 package pl.edu.pjwstk.pro.controllers;
 
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.edu.pjwstk.pro.AuthenticationService;
 import pl.edu.pjwstk.pro.LoginRequest;
 import pl.edu.pjwstk.pro.UserSession;
@@ -28,6 +25,7 @@ public class LoginController {
         }
         userSession.logIn();
     }
+
     @PreAuthorize("hasAuthority('admin')")
     @GetMapping("/forAdmin")
     public String thisIsForAdmin(){

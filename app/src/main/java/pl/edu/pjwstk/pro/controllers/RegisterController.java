@@ -1,7 +1,13 @@
 package pl.edu.pjwstk.pro.controllers;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pjwstk.pro.RegisterRequest;
 import pl.edu.pjwstk.pro.RoleService;
@@ -47,14 +53,23 @@ public class RegisterController {
         }
     }
 
-    @GetMapping("/auth0/forEveryone")
-    public String thisShouldAllowedForEveryone(){
-        return "ok";
-    }
+    //TODO getUser
+//    @PreAuthorize("hasAuthority('admin')")
+//    @GetMapping("/getSingleUser/{email}")
+//    public String getUser(@PathVariable String email){
+//        var user = userService.findByEmail(email);
+//        return user.toString();
+//    }
 
-    @PreAuthorize("hasAuthority('admin')")
-    @GetMapping("/getUsers")
-    public List<UserEntity> ReturnUsersList(){
-        return userService.getUsers();
-    }
+
+//    @GetMapping("/auth0/forEveryone")
+//    public String thisShouldAllowedForEveryone(){
+//        return "ok";
+//    }
+//@PreAuthorize("hasAuthority('admin')")
+//@GetMapping("/getUsers")
+//public List<UserEntity> ReturnUsersList(){
+//    return userService.getUsers();
+//}
+
 }

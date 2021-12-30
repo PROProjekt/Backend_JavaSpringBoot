@@ -53,25 +53,6 @@ public class User {
     public Set<String> getAuthorities() {
         return authorities;
     }
-    //    public User(String username, String password) {
-//        this.username = username;
-//        this.password = password;
-//    }
-//
-//    public void setAuthorities(Set<String> authorities) {
-//        this.authorities = authorities;
-//    }
-//
-//    public Set<String> getAuthorities() {
-//        return authorities;
-//    }
-//
-//    public String getUsername() {
-//        return username;
-//    }
-//
-//    public String getPassword() {
-//        return password;
-//    }
+
 
 }
