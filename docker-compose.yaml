@@ -8,3 +8,5 @@ services:
       POSTGRES_DB: pro
       POSTGRES_USER: pro
       POSTGRES_PASSWORD: pro!123
+    volumes:
+       - "C:/docker-db-volume:/var/lib/postgresql/data"

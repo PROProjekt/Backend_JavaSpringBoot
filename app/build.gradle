@@ -33,9 +33,6 @@ dependencies {
     implementation 'org.json:json:20171018'
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation 'com.google.code.gson:gson:2.7'
-    task wrapper(type: Wrapper){
-        gradleVersion = '7.2'
-    }
 
 }
 

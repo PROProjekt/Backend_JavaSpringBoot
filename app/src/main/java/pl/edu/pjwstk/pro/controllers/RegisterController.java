@@ -53,23 +53,5 @@ public class RegisterController {
         }
     }
 
-    //TODO getUser
-//    @PreAuthorize("hasAuthority('admin')")
-//    @GetMapping("/getSingleUser/{email}")
-//    public String getUser(@PathVariable String email){
-//        var user = userService.findByEmail(email);
-//        return user.toString();
-//    }
-
-
-//    @GetMapping("/auth0/forEveryone")
-//    public String thisShouldAllowedForEveryone(){
-//        return "ok";
-//    }
-//@PreAuthorize("hasAuthority('admin')")
-//@GetMapping("/getUsers")
-//public List<UserEntity> ReturnUsersList(){
-//    return userService.getUsers();
-//}
 
 }

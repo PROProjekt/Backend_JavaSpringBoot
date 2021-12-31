@@ -3,6 +3,8 @@ package pl.edu.pjwstk.pro.entities;
 import pl.edu.pjwstk.pro.entities.RoleEntity;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -20,6 +22,22 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity authority;
+
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "user_ticket",
+            joinColumns = { @JoinColumn(name = "user_id") },
+            inverseJoinColumns = { @JoinColumn(name = "ticket_id") }
+    )
+    Set<TicketEntity> tickets = new HashSet<>();
+
+    public void setTickets(Set<TicketEntity> tickets) {
+        this.tickets = tickets;
+    }
+
+    public Set<TicketEntity> getTickets() {
+        return tickets;
+    }
 
     public void setBirth_date(String birth_date) {
         this.birth_date = birth_date;
