@@ -20,11 +20,23 @@ CREATE TABLE user_ticket(
 );
 CREATE TABLE auditorium(
      id BIGINT NOT NULL,
-     seat_number VARCHAR(20) NOT NULL,
      screening_id BIGINT NOT NULL,
      CONSTRAINT fk_screening_id FOREIGN KEY (screening_id) REFERENCES screening(id),
      PRIMARY KEY(id)
 );
+CREATE TABLE seat (
+    id BIGINT NOT NULL,
+    seat_number VARCHAR(20) NOT NULL,
+    available BOOLEAN NOT NULL,
+    PRIMARY KEY(id)
+);
+CREATE TABLE auditorium_seat(
+    auditorium_id BIGINT NOT NULL,
+    seat_id BIGINT NOT NULL,
+    CONSTRAINT fk_auditorium_id FOREIGN KEY (auditorium_id) REFERENCES auditorium(id),
+    CONSTRAINT fk_seat_id FOREIGN KEY (seat_id) REFERENCES seat(id)
+);
+
 CREATE TABLE movie(
       id BIGINT NOT NULL,
       title VARCHAR(100) NOT NULL,

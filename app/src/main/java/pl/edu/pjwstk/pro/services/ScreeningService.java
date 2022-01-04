@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.edu.pjwstk.pro.entities.ScreeningEntity;
 import pl.edu.pjwstk.pro.exceptions.EntityNotFoundException;
+import pl.edu.pjwstk.pro.responses.Screening;
 
 import javax.persistence.EntityManager;
 
@@ -44,4 +45,8 @@ public class ScreeningService {
         return em.createQuery("select ue from ScreeningEntity ue where ue.id = :id", ScreeningEntity.class)
                 .setParameter("id", id).getSingleResult();
     }
+//    public Screening getScreening(Long id){
+//        var eS = findScreening(id);
+//        return new Screening(eS.getId(), eS.getDay(),eS.getTime());
+//    }
 }
