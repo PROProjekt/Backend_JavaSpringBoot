@@ -1,19 +1,13 @@
 package pl.edu.pjwstk.pro.services;
 
-import org.apache.tomcat.util.json.JSONParser;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.edu.pjwstk.pro.entities.AuditoriumEntity;
-//import pl.edu.pjwstk.pro.requests.AuditoriumRequest;
 import pl.edu.pjwstk.pro.requests.AuditoriumRequest;
-import pl.edu.pjwstk.pro.requests.ScreeningRequest;
 import pl.edu.pjwstk.pro.responses.*;
 
 import javax.persistence.EntityManager;
-import java.util.Comparator;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

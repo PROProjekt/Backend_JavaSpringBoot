@@ -49,6 +49,11 @@ public class MovieService {
         return em.createQuery("select ue from MovieEntity ue where ue.id = :id", MovieEntity.class)
                 .setParameter("id", id).getSingleResult();
     }
+    public Movie getMovie(Long id){
+        var mE = findMovie(id);
+        return new Movie(mE.getId(), mE.getTitle(), mE.getYear(), mE.getDescription(), mE.getType(), mE.getPoster()
+                ,mE.getScreenings().stream().map(sE -> new Screening(sE.getId(),sE.getDay(), sE.getTime())).collect(Collectors.toList()));
+    }
 
     public boolean movieExist(Long id) {
         var isExist =em.createQuery("select ue from MovieEntity ue where ue.id = :id", MovieEntity.class)
