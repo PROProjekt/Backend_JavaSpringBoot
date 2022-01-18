@@ -17,4 +17,7 @@ public class UserSession {
     public void logIn(){
         isLogged = true;
     }
+
+    //TODO log out
+    public void LogOut(){isLogged = false;}
 }
