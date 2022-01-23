@@ -23,21 +23,6 @@ public class UserEntity {
     @JoinColumn(name = "role_id")
     private RoleEntity authority;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-            name = "user_ticket",
-            joinColumns = { @JoinColumn(name = "user_id") },
-            inverseJoinColumns = { @JoinColumn(name = "ticket_id") }
-    )
-    Set<TicketEntity> tickets = new HashSet<>();
-
-    public void setTickets(Set<TicketEntity> tickets) {
-        this.tickets = tickets;
-    }
-
-    public Set<TicketEntity> getTickets() {
-        return tickets;
-    }
 
     public void setBirth_date(String birth_date) {
         this.birth_date = birth_date;

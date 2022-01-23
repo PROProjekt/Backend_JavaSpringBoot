@@ -38,6 +38,11 @@ public class UserService {
                 .setParameter("email", email)
                 .getSingleResult();
     }
+    public UserEntity findById(Long id) {
+        return em.createQuery("select ue from UserEntity ue where ue.id = :id", UserEntity.class)
+                .setParameter("id", id)
+                .getSingleResult();
+    }
 
     public boolean userExist(String email) {
         var isExist =em.createQuery("select ue from UserEntity ue where ue.email = :email", UserEntity.class)

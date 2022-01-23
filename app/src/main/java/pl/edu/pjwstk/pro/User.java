@@ -3,6 +3,7 @@ package pl.edu.pjwstk.pro;
 import java.util.Set;
 
 public class User {
+    private Long id;
     private String firstname;
     private String lastname;
     private String email;
@@ -14,6 +15,9 @@ public class User {
         this.password = password;
     }
 
+    public Long getId() {
+        return id;
+    }
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
