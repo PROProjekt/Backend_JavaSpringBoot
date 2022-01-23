@@ -8,6 +8,7 @@ import pl.edu.pjwstk.pro.requests.AuditoriumRequest;
 import pl.edu.pjwstk.pro.responses.*;
 
 import javax.persistence.EntityManager;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,7 +43,6 @@ public class AuditoriumService {
                 .getResultList();
         var responseList = list.stream().map(aE -> new Auditorium(aE.getScreeningEntity().getId(),aE.getSeats()
                 .stream().map(sE -> new Seats(sE.getId(), sE.getSeat_number(), sE.isAvailable())).collect(Collectors.toList()))).collect(Collectors.toList());
-
         return new AuditoriumCollection(responseList);
     }
 }
