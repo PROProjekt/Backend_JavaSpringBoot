@@ -2,9 +2,14 @@ package pl.edu.pjwstk.pro.email;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import pl.edu.pjwstk.pro.User;
+import pl.edu.pjwstk.pro.UserService;
+import pl.edu.pjwstk.pro.responses.UserResponse;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -14,6 +19,8 @@ import java.io.File;
 public class EmailService {
     @Autowired
     private JavaMailSender javaMailSender;
+    @Autowired
+    UserService service;
 
     public void sendSuccessRegistrationEmail(String email) throws MessagingException {
         MimeMessage msg = javaMailSender.createMimeMessage();
@@ -29,12 +36,15 @@ public class EmailService {
         javaMailSender.send(msg);
     }
 
-    public void thanksForMakingOrder(String movieTitle, String day,String email) throws MessagingException {
+    public void thanksForMakingOrder(String movieTitle) throws MessagingException {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        var user = service.findByEmail(((User) principal).getEmail());
+        var loggedUserEmail = new UserResponse(user.getEmail(), user.getFirstname(), user.getLastname(), user.getBirth_date()).getEmail();
         MimeMessage msg = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(msg, true);
-        helper.setTo(email);
-        helper.setSubject("Thanks for making order");
-        helper.setText("<h1>To  !</h1>" + "<h1>"+movieTitle+"</h1>", true);
+        helper.setTo(loggedUserEmail);
+        helper.setSubject("Thanks for making order. Sorry! We're not connected to paypal yet.");
+        helper.setText("<h2> You choose: "+movieTitle+"</h2>", true);
 
         javaMailSender.send(msg);
     }

@@ -22,5 +22,7 @@ public class UserController {
         var user_response = new UserResponse(user.getEmail(), user.getFirstname(), user.getLastname(), user.getBirth_date());
         return ResponseEntity.ok(user_response);
     }
+
+
 }
 
