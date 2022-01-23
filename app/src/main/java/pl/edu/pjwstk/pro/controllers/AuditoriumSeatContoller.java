@@ -1,6 +1,7 @@
 package pl.edu.pjwstk.pro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ public class AuditoriumSeatContoller {
     @Autowired
     AuditoriumSeatsService service;
 
+    @PreAuthorize("hasAuthority('admin')")
     @PostMapping("/setSeatsInAuditorium")
     public void connect(@RequestBody AuditroiumSeatsRequest request){
         service.connect(request.getAuditoriumId(), request.getSeatId());

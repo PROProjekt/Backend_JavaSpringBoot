@@ -2,6 +2,7 @@ package pl.edu.pjwstk.pro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ public class AuditoriumController {
     @Autowired
     AuditoriumService auditoriumService;
 
+    @PreAuthorize("hasAuthority('admin')")
     @PostMapping("/addAuditorium")
     public void saveAuditorium(@RequestBody AuditoriumRequest request){
         auditoriumService.addAuditorium(request);

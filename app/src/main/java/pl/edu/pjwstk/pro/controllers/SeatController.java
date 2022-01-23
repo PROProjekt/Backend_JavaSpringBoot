@@ -1,6 +1,7 @@
 package pl.edu.pjwstk.pro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pjwstk.pro.requests.SeatRequest;
 import pl.edu.pjwstk.pro.services.SeatService;
@@ -10,6 +11,8 @@ public class SeatController {
 
     @Autowired
     SeatService service;
+
+    @PreAuthorize("hasAuthority('admin')")
     @PostMapping("/addSeat")
     public void addSeat(@RequestBody SeatRequest seatRequest){
         service.saveSeat(seatRequest);

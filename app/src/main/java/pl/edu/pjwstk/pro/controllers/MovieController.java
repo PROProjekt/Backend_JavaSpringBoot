@@ -2,6 +2,7 @@ package pl.edu.pjwstk.pro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pjwstk.pro.email.EmailService;
 import pl.edu.pjwstk.pro.requests.MovieRequest;
@@ -19,11 +20,13 @@ public class MovieController {
     @Autowired
     EmailService emailService;
 
+    @PreAuthorize("hasAuthority('admin')")
     @PostMapping("/addMovie")
     public void addMovie(@RequestBody MovieRequest movieRequest){
         service.saveMovie(movieRequest);
     }
 
+    @PreAuthorize("hasAuthority('admin')")
     @PutMapping("/editMovie/{movieId}")
     public void updateMovie(@PathVariable Long movieId, @RequestBody MovieRequest movieRequest){
         service.editMovie(movieId,movieRequest);
