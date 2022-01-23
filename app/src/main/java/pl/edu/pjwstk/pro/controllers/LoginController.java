@@ -25,11 +25,7 @@ public class LoginController {
         }
         userSession.logIn();
     }
-    //TODO log out
-    @PostMapping("/logOut")
-    public void logOut(){
-        userSession.LogOut();
-    }
+
 
     @PreAuthorize("hasAuthority('admin')")
     @GetMapping("/forAdmin")

@@ -28,4 +28,14 @@ public class EmailService {
 
         javaMailSender.send(msg);
     }
+
+    public void thanksForMakingOrder(String movieTitle, String day,String email) throws MessagingException {
+        MimeMessage msg = javaMailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(msg, true);
+        helper.setTo(email);
+        helper.setSubject("Thanks for making order");
+        helper.setText("<h1>To  !</h1>" + "<h1>"+movieTitle+"</h1>", true);
+
+        javaMailSender.send(msg);
+    }
 }

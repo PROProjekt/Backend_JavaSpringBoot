@@ -18,6 +18,4 @@ public class UserSession {
         isLogged = true;
     }
 
-    //TODO log out
-    public void LogOut(){isLogged = false;}
 }

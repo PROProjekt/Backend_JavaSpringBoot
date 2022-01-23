@@ -26,7 +26,6 @@ public class ExampleFilter extends HttpFilter {
 
     private boolean isSiteAllowed(HttpServletRequest request){
         return request.getRequestURI().equals("/api/auth0/forEveryone");
-        //TODO dodaj get na filmy
     }
 
     private boolean isUserLogged(){ return userSession.isLoggedIn();}
