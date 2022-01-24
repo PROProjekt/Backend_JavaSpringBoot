@@ -77,13 +77,7 @@ public class TestRegistrationAndLogin {
                 .then()
                 .statusCode(HttpStatus.SC_UNAUTHORIZED);
     }
-//    @Test
-//    public void siteShouldBeAllowedForEveryoneWithoutAuthenticate(){
-//        given()
-//                .get("/api/auth0/forEveryone")
-//                .then()
-//                .statusCode(HttpStatus.SC_OK);
-//    }
+
     @Test
     public void thisIsForAdminMethodShouldReturn403AsUser() throws JSONException {
         JSONObject requestParams = new JSONObject();

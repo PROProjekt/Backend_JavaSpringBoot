@@ -18,6 +18,8 @@ public class AppWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapte
                 .antMatchers("/getMovies").permitAll()
                 .antMatchers("/getMovie/{movieId}").permitAll()
                 .antMatchers("/getSeatsInAuditoriums").permitAll()
+                .antMatchers("/setTaken/{seatId}").permitAll()
+                .antMatchers("/setAvailable/{seatId}").permitAll()
                 .antMatchers("/auth0/**").permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable();
