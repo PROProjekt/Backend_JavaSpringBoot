@@ -5,3 +5,5 @@ gradlew
 gradlew.bat
 .gradle
 settings.gradle
+gradle
+gradle/wrapper
